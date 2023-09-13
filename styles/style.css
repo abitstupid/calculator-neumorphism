@@ -1,0 +1,115 @@
+body {
+	background: var(--secondary-color-theme);
+	min-height: 100vh;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	background: var(--secondary-color-theme);
+	min-width: 300px;
+	width: 350px;
+	height: auto;
+
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	padding: 25px 35px;
+
+	border-radius: 40px;
+}
+
+#display-area {
+	width: 100%;
+
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: repeat(2, minmax(40px, auto));
+	word-wrap: break-word;
+
+	margin-bottom: 2rem;
+    margin-top: 0.3rem;
+	padding-bottom: 5px;
+	border-radius: 8px;
+}
+
+.previous-input , .current-input {
+    height: 64px;
+}
+#display-area .previous-input , .current-input {
+	color: var(--secondary-color-style);
+
+	font-size: xx-large;
+	font-family: "Digital 7", monospace;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+	word-break: break-all;
+	word-wrap: break-word;
+}
+
+.keypad-btns {
+	display: grid;
+	grid: repeat(5, 56px) / repeat(4, 56px);
+	column-gap: 12px;
+    row-gap: 20px;
+}
+
+.keypad-btns button {
+	outline: none;
+	border: none;
+	border-radius: 10px;
+
+	font-family: "Digital 7", monospace;
+	color: var(--primary-color-style);
+	font-size: x-large;
+	user-select: none;
+}
+
+.keypad-btns .fun-btn {
+	color: var(--secondary-color-style);
+}
+
+#evaluate {
+	background: var(--primary-color-style);
+	box-shadow: 5px 5px 11px #c3c3c3,
+    -5px -5px 11px #fdfdfd,
+    inset 5px 5px 11px #d36d5d,
+    inset -5px -5px 11px #eb897a;
+}
+
+#evaluate:hover {
+	background: var(--primary-color-style);
+	box-shadow: 5px 5px 11px #c3c3c3,
+    -5px -5px 11px #fdfdfd,
+    inset 5px 5px 11px #ff8673,
+    inset -5px -5px 11px #f46e59;
+}
+
+/* error div */
+
+#error-container {
+	position: absolute;
+	top: 20px;
+
+	width: 100%;
+	z-index: 999;
+	color: var(--primary-color-style);
+	
+	text-align: center;
+	display: none;
+	visibility: hidden;
+}
+
+@media screen and (max-width: 420px) {
+	.container {
+		transform: scale(0.7);
+	}
+}

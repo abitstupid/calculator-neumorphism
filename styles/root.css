@@ -1,0 +1,70 @@
+/* GENERAL */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* VARIABLES  */
+:root {
+	--primary-color-theme: #ffffff;
+	--secondary-color-theme: #e0e0e0;
+	--tertiary-color-theme: #c1c1c1;
+
+	--primary-color-style: #f37e6d;
+	--secondary-color-style: #465865;
+	--tertiary-color-style: #8896a1;
+}
+
+/* FONTS */
+@font-face {
+	font-family: "Digital 7";
+	src: url(fonts/digital-7.ttf);
+}
+
+@font-face {
+	font-family: "Digital 7 Mono";
+	src: url(fonts/digital-7_mono.ttf);
+}
+
+.digital-7 {
+	font-family: "Digital 7", monospace;
+}
+
+.digital-7-mono {
+	font-family: "Digital 7 Mono", monospace;
+}
+
+/*THEME BUTTONS (CONVEX) */
+
+.convex-component {
+	background: linear-gradient(145deg, #cacaca, #f0f0f0);
+	box-shadow: 5px 5px 11px #c3c3c3, -5px -5px 11px #fdfdfd;
+}
+
+
+.convex-component:hover {
+	background: linear-gradient(145deg, #f0f0f0, #cacaca);
+	box-shadow: 5px 5px 11px #c3c3c3, -5px -5px 11px #fdfdfd;
+
+	cursor: pointer;
+}
+
+.convex-component:active {
+	background: linear-gradient(145deg, #cacaca, #f0f0f0);
+	box-shadow: 5px 5px 11px #c3c3c3, -5px -5px 11px #fdfdfd;
+
+	cursor: pointer;
+}
+
+
+.plain-component {
+	box-shadow: 10px 10px 20px var(--tertiary-color-theme),
+		-10px -10px 20px var(--primary-color-theme);
+}
+
+.inset-component {
+	background: #e0e0e0;
+	box-shadow: inset 9px 9px 27px #c5c5c5, inset -9px -9px 27px #fbfbfb;
+}
